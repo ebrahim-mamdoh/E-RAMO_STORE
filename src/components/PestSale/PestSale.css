@@ -1,0 +1,33 @@
+.bestSale{
+    padding: 70px;
+}
+
+
+.bestSale .mainPic{
+    height: 390px;
+    
+}
+.bestSale .mainPic img{
+    width: 100%;
+    /* background-image: url('./'); */
+}
+
+.bestSale .slider2{
+    height: 390px;
+    background-color: rgb(226, 171, 43);
+}
+
+
+/* swiper  */
+.carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the carousel */
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

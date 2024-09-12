@@ -1,0 +1,18 @@
+.carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the carousel */
+    padding: 30px 12px;
+    box-shadow: 0 0 8px #ddd;
+    margin: -64px;
+    z-index: 10;
+}
+
+img {
+    width: 108px;
+    border: 1px solid #c5aa10;
+    border-radius: 0;
+    /* height: 125px; */
+    height: auto;
+    border-radius: 10px;
+}
