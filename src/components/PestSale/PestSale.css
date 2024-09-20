@@ -1,5 +1,5 @@
 .bestSale{
-    padding: 70px;
+    /* padding: 70px; */
 }
 
 
@@ -14,20 +14,29 @@
 
 .bestSale .slider2{
     height: 390px;
-    background-color: rgb(226, 171, 43);
-}
+    }
 
 
 /* swiper  */
 .carousel-container {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto; /* Center the carousel */
-    padding: 20px;
-}
+    margin: 0 auto; 
+    height: 100%;
+    }
 
-img {
+.bestSale img{
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 100%;
+    }
+
+
+.pestSale-container{
+    width: 100%;
+}
+.inlineDetails{
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 10px;
 }

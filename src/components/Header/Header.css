@@ -94,12 +94,20 @@
     line-height: 24px;
 }
 
+.secondSlider{
+    width: 100%;
+    height: 200px;
+    background-color: #bfb521;
+}
 
 
 @media (max-width: 992px) {
     .navbar-expand-lg {
         flex-wrap: nowrap;
         justify-content: flex-start;
+    }
+    .cal,.navbar-brand{
+        display: none;
     }
 }
 

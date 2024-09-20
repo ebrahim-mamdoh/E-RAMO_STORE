@@ -25,7 +25,7 @@ export default function SecondSlider() {
                 slidesPerView={7}  // Show 7 images per slide
                 spaceBetween={10}   // Space between images
                 navigation          // Enable navigation arrows
-                pagination={{ clickable: true }}  // Enable pagination dots
+                // pagination={{ clickable: true }}  // Enable pagination dots
                 modules={[Navigation, Pagination]} // Specify the modules being used
                 // onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)} // Update active slide index
             >

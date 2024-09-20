@@ -1,14 +1,15 @@
-.carousel-container {
+.image-slider {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto; /* Center the carousel */
     padding: 30px 12px;
     box-shadow: 0 0 8px #ddd;
-    margin: -64px;
-    z-index: 10;
+    background-color: aqua;
+    margin: -64px auto;
+    z-index: 100 !important; 
 }
 
-img {
+.image-slider img {
     width: 108px;
     border: 1px solid #c5aa10;
     border-radius: 0;
