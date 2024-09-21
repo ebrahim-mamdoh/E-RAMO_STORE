@@ -1,0 +1,62 @@
+
+
+
+
+
+
+
+/* Container for the row */
+.responsive-row {
+    display: flex;               /* Use flexbox to align divs in a row */
+    justify-content: space-between; /* Create space between the boxes */
+    gap: 24px;                    /* 24px gap between the divs */
+    flex-wrap: wrap;  
+    color: white;            /* Ensure the boxes wrap on smaller screens */
+  }
+  
+  /* Styles for the individual boxes */
+  .box {
+    flex: 1;                      /* Make the boxes grow to fill the container */
+    min-width: 200px;             /* Minimum width to ensure responsiveness */
+    padding: 20px;
+    background-color: lightgray;
+    height: 200px;
+     display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: transform 0.5s ease; /* Smooth transition for the zoom */
+
+    
+  }
+  .box:hover{
+    transform: scale(1.1);
+  }
+  
+  /* Ensure padding inside container */
+  .container {
+    padding: 24px;
+  }
+  
+  .responsive-row .box-1 {
+    background-image: url(../../assets/sale/s1.png);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease; /* Smooth transition for the zoom */
+
+    
+
+  }
+  .responsive-row .box-2{
+    background-image: url(../../assets/sale/s2.jpg);
+    background-size: cover;
+    background-position: center;
+
+   
+  }
+  .responsive-row .box-3 {
+    background-image: url(../../assets/sale/s3.jpg);
+    background-size: cover;
+    background-position: center;
+
+  }
