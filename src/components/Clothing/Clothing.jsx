@@ -7,15 +7,21 @@ import 'swiper/css/pagination';   // Import Swiper's Pagination module CSS
 import { Navigation, Pagination } from 'swiper/modules';
 
 
-// import images 
-// import img1 from '../../assets/secondcaCousel/1.jpg';
-// import img2 from '../../assets/secondcaCousel/2.jpg';
-// import img3 from '../../assets/secondcaCousel/3.jpg';
-// import img4 from '../../assets/secondcaCousel/4.jpg';
-// import img5 from '../../assets/secondcaCousel/5.jpg';
-// import img6 from '../../assets/secondcaCousel/6.jpg';
-// import img7 from '../../assets/secondcaCousel/7.jpg';
-import './Clothing.css'
+import imag1 from '../../assets/clothing/4.jpg'
+import imag2 from  '../../assets/clothing/5.jpg'
+import imag3 from '../../assets/clothing/6.jpg'
+import imag4 from '../../assets/clothing/10.jpg'
+import imag5 from  '../../assets/clothing/11.jpg'
+import imag6 from '../../assets/clothing/12.jpg'
+import imag7 from '../../assets/clothing/13.jpg'
+import imag8 from  '../../assets/clothing/1.jpg'
+import imag9 from  '../../assets/clothing/14.jpg'
+import imag10 from '../../assets/clothing/2.png'
+import imag11 from '../../assets/clothing/8.jpg'
+
+
+
+import  './Clothing.css'
 
 
 
@@ -117,6 +123,7 @@ const products = [
 ];
 
 export default function Clothing() {
+  const  BagsImgs=[imag1,imag2,imag3,imag4 ,imag5,imag6,imag7,imag8,imag9,imag10,imag11]
     return (<>
         <div className="container">
             <div className="product-slider">
@@ -141,6 +148,49 @@ export default function Clothing() {
                                     <div className="discount-tag">{product.discount}</div>
                                 )}
                                 <img src={product.img} alt={product.title} className="product-image" />
+                                <div className="product-info">
+                                    <h3 className="product-title">{product.title}</h3>
+                                    <p className="product-category">{product.category}</p>
+                                    <div className="product-pricing">
+                                        <span className="current-price">{product.price}</span>
+                                        {product.oldPrice && (
+                                            <span className="old-price">{product.oldPrice}</span>
+                                        )}
+                                    </div>
+                                </div>
+                                <button className="add-to-cart-btn">+</button>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
+        </div>
+
+        <div className="container">
+            <div className="product-slider">
+                <h2>Bags</h2>
+                <p>-women bags -hand bags </p>
+                <Swiper
+                    slidesPerView={'auto'}  // Adjust slides based on screen width
+                    spaceBetween={10}       // Space between items
+                    // navigation              // Enable navigation arrows
+                    breakpoints={{
+                        640: {              // For screens larger than 640px
+                            slidesPerView: 7,  // Show 7 items
+                            spaceBetween: 10,
+                        },
+                    }}
+                    modules={[Navigation]}  // Use the Navigation module
+                >
+
+                    {products.map((product, index) => (
+                        
+                        <SwiperSlide key={index} style={{ minWidth: '117px' }}>
+                            <div className="product-card">
+                                {product.discount && (
+                                    <div className="discount-tag">{product.discount}</div>
+                                )}
+                                <img src={BagsImgs[index]} alt={product.title} className="product-image" />
                                 <div className="product-info">
                                     <h3 className="product-title">{product.title}</h3>
                                     <p className="product-category">{product.category}</p>

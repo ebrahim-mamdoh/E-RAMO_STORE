@@ -25,6 +25,12 @@
     min-width: 117px; /* Ensure the card doesn't get smaller than 117px */
     box-sizing: border-box;
 }
+.product-card p{
+
+    color: #c3ad1b;
+    font-weight: bold;
+}
+
 
 .discount-tag {
     position: absolute;
@@ -49,9 +55,8 @@
 
 .product-title {
     font-size: 16px;
-    font-weight: bold;
     margin-bottom: 5px;
-    color: #333;
+    color: #777777;
 }
 
 .product-category {
@@ -61,6 +66,7 @@
 }
 
 .product-pricing {
+    font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,9 +74,9 @@
 }
 
 .current-price {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    color: #777777;
 }
 
 .old-price {
