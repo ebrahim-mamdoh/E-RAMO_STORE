@@ -79,53 +79,88 @@ const products = [
         discount: '',
         price: '400 EGP',
         oldPrice: '',
+        
+    },
+    {
+        img: require('../../assets/secondcaCousel/1.jpg'),
+        title: 'A Gentleman In Moscow',
+        category: 'Dresses',
+        discount: '96%',
+        price: '300 EGP',
+        oldPrice: '7000 EGP',
+    },
+    {
+        img: require('../../assets/secondcaCousel/2.jpg'),
+        title: 'Bee Honey',
+        category: 'Dresses',
+        discount: '99%',
+        price: '55 EGP',
+        oldPrice: '7000 EGP',
+    },
+    {
+        img: require('../../assets/secondcaCousel/3.jpg'),
+        title: 'Conversation With Friends',
+        category: 'Dresses',
+        discount: '96%',
+        price: '250 EGP',
+        oldPrice: '7000 EGP',
+    },
+    {
+        img: require('../../assets/secondcaCousel/4.jpg'),
+        title: 'Verity BY Colleen Hoover',
+        category: 'Dresses',
+        discount: '97%',
+        price: '207 EGP',
+        oldPrice: '7000 EGP',
     },
     // Add more products as needed
 ];
 
 export default function Clothing() {
-  return (<>
-  <div className="container">
-  <div className="product-slider">
-            <h2>Clothing</h2>
-            <p>-Dresses -Skirts -Western Wear -Sport Wear -Men Shirt -Pants</p>
-            <Swiper
-                slidesPerView={'auto'}  // Adjust slides based on screen width
-                spaceBetween={10}       // Space between items
-                navigation              // Enable navigation arrows
-                breakpoints={{
-                    640: {              // For screens larger than 640px
-                        slidesPerView: 7,  // Show 7 items
-                        spaceBetween: 10,
-                    },
-                }}
-                modules={[Navigation]}  // Use the Navigation module
-            >
-                {products.map((product, index) => (
-                    <SwiperSlide key={index}>
-                        <div className="product-card">
-                            {product.discount && (
-                                <div className="discount-tag">{product.discount}</div>
-                            )}
-                            <img src={product.img} alt={product.title} className="product-image" />
-                            <div className="product-info">
-                                <h3 className="product-title">{product.title}</h3>
-                                <p className="product-category">{product.category}</p>
-                                <div className="product-pricing">
-                                    <span className="current-price">{product.price}</span>
-                                    {product.oldPrice && (
-                                        <span className="old-price">{product.oldPrice}</span>
-                                    )}
+    return (<>
+        <div className="container">
+            <div className="product-slider">
+                <h2>Clothing</h2>
+                <p>-Dresses -Skirts -Western Wear -Sport Wear -Men Shirt -Pants</p>
+                <Swiper
+                    slidesPerView={'auto'}  // Adjust slides based on screen width
+                    spaceBetween={10}       // Space between items
+                    // navigation              // Enable navigation arrows
+                    breakpoints={{
+                        640: {              // For screens larger than 640px
+                            slidesPerView: 7,  // Show 7 items
+                            spaceBetween: 10,
+                        },
+                    }}
+                    modules={[Navigation]}  // Use the Navigation module
+                >
+                    {products.map((product, index) => (
+                        <SwiperSlide key={index} style={{ minWidth: '117px' }}>
+                            <div className="product-card">
+                                {product.discount && (
+                                    <div className="discount-tag">{product.discount}</div>
+                                )}
+                                <img src={product.img} alt={product.title} className="product-image" />
+                                <div className="product-info">
+                                    <h3 className="product-title">{product.title}</h3>
+                                    <p className="product-category">{product.category}</p>
+                                    <div className="product-pricing">
+                                        <span className="current-price">{product.price}</span>
+                                        {product.oldPrice && (
+                                            <span className="old-price">{product.oldPrice}</span>
+                                        )}
+                                    </div>
                                 </div>
+                                <button className="add-to-cart-btn">+</button>
                             </div>
-                            <button className="add-to-cart-btn">+</button>
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
         </div>
-  </div>
-  </>
+    </>
+
+
     );
-  
+
 }

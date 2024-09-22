@@ -14,14 +14,16 @@
 }
 
 .product-card {
-    min-width: 117px;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
+    min-height: 290px;
     position: relative;
     text-align: center;
     overflow: hidden;
+    min-width: 117px; /* Ensure the card doesn't get smaller than 117px */
+    box-sizing: border-box;
 }
 
 .discount-tag {
@@ -78,11 +80,16 @@
 }
 
 .add-to-cart-btn {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #c3ad1b;
     color: white;
     border: none;
     padding: 5px 10px;
-    border-radius: 50%;
+    border-radius: 3px;
     font-size: 18px;
     cursor: pointer;
     position: absolute;
