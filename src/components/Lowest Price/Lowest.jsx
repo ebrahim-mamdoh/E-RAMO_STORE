@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'; // Import Swiper and SwiperS
 import 'swiper/css';              // Import core Swiper CSS
 import 'swiper/css/navigation';   // Import Swiper's Navigation module CSS
 import 'swiper/css/pagination';   // Import Swiper's Pagination module CSS
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 
 // Sample product data (can be replaced with dynamic data from an API or database)
@@ -83,7 +83,7 @@ export default function Lowest() {
                     modules={[Navigation]}  // Use the Navigation module
                 >
                     {products.map((product, index) => (
-                        <SwiperSlide key={index} style={{ minWidth: '117px' }}>
+                        <SwiperSlide key={index} style={{ minWidth: '117px'}}>
                             <div className="product-card">
                                 {product.discount && (
                                     <div className="discount-tag">{product.discount}</div>

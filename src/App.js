@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Footer from "./components/Footer/Footer"
 import Header from './components/Header/Header';
@@ -7,6 +6,7 @@ import Sale from './components/Sale/Sale';
 import Clothing from './components/Clothing/Clothing';
 import Sale2 from './components/Sale2/Sale2';
 import Lowest from './components/Lowest Price/Lowest';
+import topPtn from './components/topPtn/Top-btn';
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
    <Clothing/>
     <Sale2/>
     <Lowest/>
+    <topPtn/>
 
    <Footer/>
    </>
